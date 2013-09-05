@@ -1,3 +1,5 @@
+(English version coming soon!)
+
 Cerrado
 =======
 
@@ -22,20 +24,22 @@ Entrada:
 
 Saída:
 
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Cerrado</title>
-	</head>
-	<body>
-		<header>
-			<h1>Olá mundo!</h1>
-			<p class="texto">Você pode inserir qualquer elemento HTML com Cerrado e definir atributos normalmente.</p>
-		</header>
-	</body>
-	</html>
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cerrado</title>
+</head>
+<body>
+	<header>
+		<h1>Olá mundo!</h1>
+		<p class="texto">Você pode inserir qualquer elemento HTML com Cerrado e definir atributos normalmente.</p>
+	</header>
+</body>
+</html>
+```
+	
 Características
 ---------------
 
@@ -86,3 +90,15 @@ Em breve!
 Por que Cerrado?
 ----------------
 
+O Cerrado é a segunda maior formação vegetal da América do Sul, ocupa um quarto do território brasileiro e é reconhecido como a região com savanas mais rica em vida no planeta. Porém, já perdeu metade de sua vegetação original. Segundo a Conservation International, o Cerrado é o bioma mais ameaçado do país, ao lado da Mata Atlântica.
+
+Saiba mais: http://www.wwf.org.br/natureza_brasileira/areas_prioritarias/cerrado/
+
+Conheça o trabalho da OPA, organização que atua na área do Cerrado: http://www.opa.org.br/
+
+Licença
+-------
+
+(C) 2013 Felipe Saldanha. Todos os direitos reservados.
+
+Você está autorizado a utilizar esse software para fins comerciais e não-comerciais, desde que mantenha os créditos no software derivado.
