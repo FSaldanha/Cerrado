@@ -10,15 +10,16 @@ Exemplo
 
 Entrada:
 
-	title {
+	$title {
 		Cerrado
 	}
-	header {
-		h1 {
+	$header {
+		$h1 {
 			Olá mundo!
 		}
-		p (class: “texto”) {
-			Você pode inserir qualquer elemento HTML com Cerrado e definir atributos normalmente.
+		$p (class: “texto”) {
+			Você pode inserir qualquer elemento HTML com $strong { Cerrado } $br
+			e definir atributos normalmente.
 		}
 	}
 
@@ -34,7 +35,8 @@ Saída:
 <body>
 	<header>
 		<h1>Olá mundo!</h1>
-		<p class="texto">Você pode inserir qualquer elemento HTML com Cerrado e definir atributos normalmente.</p>
+		<p class="texto">Você pode inserir qualquer elemento HTML com <strong>Cerrado</strong><br>
+		e definir atributos normalmente.</p>
 	</header>
 </body>
 </html>
@@ -45,20 +47,30 @@ Características
 
 ### Notação própria
 
-Ao invés de tags, Cerrado utiliza blocos formados por chaves para compor os elementos HTML. Os atributos são passados individualmente ou no formato `chave: “valor”`, separados por vírgula e inseridos entre parênteses.
+Para compor os elementos HTML, Cerrado utiliza, no lugar de tags, blocos formados por chaves e antecedidos por um `$` seguido do nome do elemento. Os atributos são passados individualmente ou no formato `chave: “valor”`, separados por vírgula e inseridos entre parênteses.
 
-	elemento (atributo, atributo: “valor”) {
+	$elemento (atributo, atributo: “valor”) {
 		//conteúdo
 	}
+	
+Elementos vazios ou que não possuem conteúdo dispensam as chaves:
+
+`$br`
+
+`$img (src: "hello.jpg")`
+
+`$script (src: "plugins.js")`
+
+Para imprimir o sinal `$` no arquivo compilado, é preciso escapá-lo com `\`.
 
 ### Integração com outras linguagens
 
 Um código em Cerrado pode ser compilado normalmente com trechos de códigos em outras linguagens server-side, CSS e Javascript.
 
-	style {
+	$style {
 		//código CSS
 	}
-	script {
+	$script {
 		//código Javascript
 	}
 	<?php
@@ -76,6 +88,10 @@ Cerrado pode ordenar os elementos HTML em uma ordem específica para otimizar a 
 ### Templates
 
 Por padrão, Cerrado adiciona automaticamente certos trechos de código ao arquivo compilado, como a declaração `DOCTYPE` e as tags `<html>`, `<head>` e `<body>`. Você pode alterar o template padrão ou desativar completamente essa função.
+
+### Comentários
+
+Comentários são precedidos por `//` e não aparecem no arquivo compilado. Para gerar comentários HTML, utilize `$comment { ... }`.
 
 Compilador
 ----------
